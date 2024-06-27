@@ -5,4 +5,5 @@
 ## Examples
 
 ## Installation
-1. `pnpm dlx create-next-app@latest`
+1. `bun create next-app`
+2. `npx shadcn-ui@latest init`
