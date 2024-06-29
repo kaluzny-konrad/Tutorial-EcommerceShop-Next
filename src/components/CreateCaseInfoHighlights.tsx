@@ -10,7 +10,7 @@ export default function CreateCaseInfoHighlights() {
   ];
 
   return (
-    <ul className="mx-auto mt-12 w-fit max-w-prose space-y-2 sm:text-lg">
+    <ul className="mx-auto mt-12 w-fit space-y-2 sm:text-lg">
       {HIGHLIGHTS.map((highlight, index) => (
         <Highlight key={index}>{highlight}</Highlight>
       ))}
