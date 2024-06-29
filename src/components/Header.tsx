@@ -1,11 +1,22 @@
+import HeaderText from "@/components/HeaderText";
+import HeaderHighlights from "@/components/HeaderHighlights";
+import HeaderPhoneCaseImage from "@/components/HeaderPhoneCaseImage";
+import HeaderDescription from "@/components/HeaderDescription";
+import HeaderUsersAndStars from "@/components/HeaderUsersAndStars";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+
 export default function Header() {
   return (
-    <div className="flex flex-col items-center">
-      <img src="/snake-1.png" className="w-28 lg:w-24 lg:self-start" />
-      <h1 className="def-header text-center lg:text-left">
-        Your Image on a{" "}
-        <span className="bg-green-600 px-2 text-white">Custom</span> Phone Case
-      </h1>
-    </div>
+    <MaxWidthWrapper className="pb-24 pt-24 sm:pb-32 lg:grid lg:grid-cols-3 lg:pt-24 xl:pt-32">
+      <div className="col-span-2">
+        <HeaderText />
+        <HeaderDescription />
+        <HeaderHighlights />
+        <HeaderUsersAndStars />
+      </div>
+      <div className="col-span-1">
+        <HeaderPhoneCaseImage />
+      </div>
+    </MaxWidthWrapper>
   );
 }

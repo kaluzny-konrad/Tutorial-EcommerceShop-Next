@@ -1,6 +1,6 @@
 import { Icons } from "./Icons";
 
-export default function UnderlinedHeader({ children }: { children: string }) {
+export default function H1Underlined({ children }: { children: string }) {
   return (
     <span className="relative px-2">
       {children}

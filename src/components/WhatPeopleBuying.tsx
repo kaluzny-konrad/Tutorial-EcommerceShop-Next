@@ -12,7 +12,7 @@ const PHONES: Array<string> = [
 
 export default function WhatPeopleBuying() {
   return (
-    <div className="mt-12 pt-16">
+    <div className="pt-16">
       <MaxWidthWrapper className="relative max-w-5xl">
         <img
           aria-hidden="true"
