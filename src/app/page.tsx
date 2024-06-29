@@ -4,8 +4,8 @@ import HeaderPhoneCaseImage from "@/components/HeaderPhoneCaseImage";
 import HeaderText from "@/components/HeaderText";
 import HeaderUsersAndStars from "@/components/HeaderUsersAndStars";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { Reviews } from "@/components/Reviews";
-import WhatCustomersSay from "@/components/WhatCustomersSay";
+import WhatPeopleBuying from "@/components/WhatPeopleBuying";
+import UserReviews from "@/components/UserReviews";
 
 export default function Home() {
   return (
@@ -25,11 +25,11 @@ export default function Home() {
       </section>
 
       <section className="grainy-dark bg-slate-100 py-24">
-        <WhatCustomersSay />
-        <div className="mt-12">
-          <Reviews />
-        </div>
+        <UserReviews />
+        <WhatPeopleBuying />
       </section>
+
+      <section></section>
     </div>
   );
 }
