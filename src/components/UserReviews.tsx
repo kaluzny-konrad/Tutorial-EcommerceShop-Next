@@ -4,19 +4,23 @@ import UserReview, { UserReviewProps } from "./UserReview";
 
 const REVIEWS: UserReviewProps[] = [
   {
-    Content: `I usually keep my phone together with my keys in my pocket and
-            that led to some pretty heavy scratchmarks on all of my last phone
-            cases. This one, besides a barely noticeable scratch on the
-            corner, looks brand new after about half a year. I dig it.`,
+    Content: {
+      LeftSideContent: `I've had this case for a couple of months now and it's still looking great. `,
+      HighlightedContent: "The design is super clear",
+      RightSideContent:
+        " and the case itself is very durable. I've dropped my phone a few times and it's still holding up. I would definitely recommend this case.",
+    },
     UserName: "Josh",
     UserImage: "/users/user-4.jpg",
     Verified: true,
   },
   {
-    Content: `I've had this case for a couple of months now and it's still
-              looking great. The design is super clear and the case itself is
-              very durable. I've dropped my phone a few times and it's still
-              holding up. I would definitely recommend this case.`,
+    Content: {
+      LeftSideContent: `This phone case has exceeded my expectations. `,
+      HighlightedContent: "The color hasn't faded at all",
+      RightSideContent:
+        " and it fits my phone perfectly. I love how sleek and stylish it looks. Plus, it provides excellent protection. Highly recommend!",
+    },
     UserName: "Emily",
     UserImage: "/users/user-2.png",
     Verified: true,

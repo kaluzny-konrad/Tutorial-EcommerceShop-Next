@@ -1,7 +1,13 @@
 import { CheckIcon, StarIcon } from "lucide-react";
 
+export interface Content {
+  LeftSideContent: string;
+  HighlightedContent: string;
+  RightSideContent: string;
+}
+
 export interface UserReviewProps {
-  Content: string;
+  Content: Content;
   UserName: string;
   UserImage: string;
   Verified: boolean;
@@ -18,7 +24,13 @@ export default function UserReview(review: UserReviewProps) {
         <StarIcon className="h-5 w-5 fill-green-600 text-green-600" />
       </div>
       <div className="text-lg leading-8">
-        <p>{review.Content}</p>
+        <p>
+          {review.Content.LeftSideContent}
+          <span className="bg-slate-800 p-0.5 text-white">
+            {review.Content.HighlightedContent}
+          </span>
+          {review.Content.RightSideContent}
+        </p>
       </div>
       <div className="mt-2 flex gap-4">
         <img
