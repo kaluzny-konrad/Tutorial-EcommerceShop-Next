@@ -4,6 +4,7 @@ import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { ROUTE_CONFIGURE_UPLOAD } from "@/app/configure/upload/page";
 
 export default async function Navbar() {
   const { getUser } = getKindeServerSession();
@@ -48,7 +49,7 @@ export default async function Navbar() {
                   </Link>
                 ) : null}
                 <Link
-                  href="/configure/upload"
+                  href={ROUTE_CONFIGURE_UPLOAD}
                   className={buttonVariants({
                     size: "sm",
                     className: "hidden items-center gap-1 sm:flex",
@@ -83,7 +84,7 @@ export default async function Navbar() {
                 <div className="hidden h-8 w-px bg-zinc-200 sm:block" />
 
                 <Link
-                  href="/configure/upload"
+                  href={ROUTE_CONFIGURE_UPLOAD}
                   className={buttonVariants({
                     size: "sm",
                     className: "hidden items-center gap-1 sm:flex",

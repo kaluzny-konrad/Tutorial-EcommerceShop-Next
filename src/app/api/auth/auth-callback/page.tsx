@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import { getUser } from "./actions";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
+import { LS_CASE_CONFIGURATION_ID } from "@/config/localstorageNames";
+import { ROUTE_CONFIGURE_DESIGN } from "@/app/configure/design/page";
 
-export const CASE_CONFIGURATION_ID = "caseConfigurationId";
+export const ROUTE_AUTH_CALLBACK = "/auth/auth-callback";
 
 export default function AuthCallbackPage() {
   const [caseConfigurationId, setCaseConfigurationId] = useState<string | null>(
@@ -16,7 +18,7 @@ export default function AuthCallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const caseConfigurationId = localStorage.getItem(CASE_CONFIGURATION_ID);
+    const caseConfigurationId = localStorage.getItem(LS_CASE_CONFIGURATION_ID);
     if (caseConfigurationId) setCaseConfigurationId(caseConfigurationId);
   }, []);
 
@@ -29,8 +31,8 @@ export default function AuthCallbackPage() {
 
   if (user?.user) {
     if (caseConfigurationId) {
-      localStorage.removeItem(CASE_CONFIGURATION_ID);
-      router.push(`/configure/preview?id=${caseConfigurationId}`);
+      localStorage.removeItem(LS_CASE_CONFIGURATION_ID);
+      router.push(ROUTE_CONFIGURE_DESIGN(caseConfigurationId));
     } else {
       router.push("/");
     }
