@@ -1,7 +1,15 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["utfs.io"],
+    remotePatterns: [
+      { protocol: "https", pathname: "**", hostname: "uploadthing.com" },
+      { protocol: "https", pathname: "**", hostname: "utfs.io" },
+      {
+        protocol: "https",
+        pathname: "**",
+        hostname: "lh3.googleusercontent.com",
+      },
+    ],
   },
 };
 
