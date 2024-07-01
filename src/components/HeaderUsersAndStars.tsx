@@ -47,7 +47,7 @@ function StarIcons(props: { count: number }) {
       {[...Array(props.count)].map((_, index) => (
         <StarIcon
           key={index}
-          className="h-4 w-4 fill-green-600 text-green-600"
+          className="h-4 w-4 fill-green-700 text-green-700"
         />
       ))}
     </div>

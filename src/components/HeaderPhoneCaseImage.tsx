@@ -23,7 +23,7 @@ export default function HeaderPhoneCaseImage() {
           alt=""
           role="presentation"
         />
-        <Phone className="w-64" imgSrc="/testimonials/1.jpg" />
+        <Phone className="w-64" imgSrc="/testimonials/1.jpg" priority={true} />
       </div>
     </div>
   );

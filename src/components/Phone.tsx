@@ -5,9 +5,16 @@ import { HTMLAttributes } from "react";
 interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
   imgSrc: string;
   dark?: boolean;
+  priority?: boolean;
 }
 
-const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
+const Phone = ({
+  imgSrc,
+  className,
+  dark = false,
+  priority = false,
+  ...props
+}: PhoneProps) => {
   return (
     <div
       className={cn(
@@ -26,7 +33,7 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
         }
         className="z-50 select-none"
         alt="phone case layout"
-        priority
+        priority={priority}
       />
 
       <div className="absolute inset-0 -z-10">
@@ -36,7 +43,7 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
           className="min-h-full min-w-full object-cover"
           src={imgSrc}
           alt="example of your image on a phone case"
-          priority
+          priority={priority}
         />
       </div>
     </div>

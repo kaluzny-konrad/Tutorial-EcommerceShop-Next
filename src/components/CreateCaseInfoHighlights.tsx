@@ -21,7 +21,7 @@ export default function CreateCaseInfoHighlights() {
 function Highlight(props: React.PropsWithChildren<{ className?: string }>) {
   return (
     <li className={cn("w-fit", props.className)}>
-      <CheckIcon className="mr-1.5 inline h-5 w-5 text-green-600" />
+      <CheckIcon className="mr-1.5 inline h-5 w-5 text-green-700" />
       {props.children}
     </li>
   );

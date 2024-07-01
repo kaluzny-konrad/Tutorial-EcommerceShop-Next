@@ -22,7 +22,7 @@ function HeaderHighlight(
 ) {
   return (
     <li className={cn("flex items-center gap-1.5 text-left", props.className)}>
-      <CheckIcon className="h-5 w-5 shrink-0 text-green-600" />
+      <CheckIcon className="h-5 w-5 shrink-0 text-green-700" />
       {props.children}
     </li>
   );
