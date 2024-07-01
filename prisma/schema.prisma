@@ -65,8 +65,8 @@ enum CaseColor {
 
 model Order {
   id                String            @id @default(cuid())
-  configurationId   String
-  CaseConfiguration CaseConfiguration @relation(fields: [configurationId], references: [id])
+  caseConfigurationId   String
+  CaseConfiguration CaseConfiguration @relation(fields: [caseConfigurationId], references: [id])
   User              User              @relation(fields: [userId], references: [id])
   userId            String
   amount            Float
