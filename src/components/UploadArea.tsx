@@ -14,7 +14,7 @@ import { useToast } from "@/components/ui/use-toast";
 
 import { useUploadThing, IMAGE_UPLOADER_ENDPOINT } from "@/lib/uploadthing";
 import { cn } from "@/lib/utils";
-import { ROUTE_CONFIGURE_DESIGN } from "@/app/configure/design/page";
+import { ROUTE_CONFIGURE_DESIGN } from "@/config/routes";
 
 export default function UploadArea() {
   const { toast } = useToast();

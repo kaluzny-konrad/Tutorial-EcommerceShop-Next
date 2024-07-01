@@ -17,7 +17,7 @@ import {
 } from "@/validators/option-validator";
 import { getImage, canvasToFile, cn, formatPrice } from "@/lib/utils";
 import { SaveOptionsArgs, saveOptions } from "@/app/configure/design/actions";
-import { ROUTE_CONFIGURE_PREVIEW } from "@/app/configure/preview/page";
+import { ROUTE_CONFIGURE_PREVIEW } from "@/config/routes";
 import { BASE_PRICE } from "@/config/products";
 
 import { useToast } from "@/components/ui/use-toast";

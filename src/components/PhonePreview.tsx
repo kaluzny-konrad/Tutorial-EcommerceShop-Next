@@ -4,6 +4,7 @@ import { CaseColor } from "@prisma/client";
 import { useEffect, useRef, useState } from "react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type Props = {
   croppedImageUrl: string;
@@ -30,7 +31,7 @@ export default function PhonePreview({ croppedImageUrl, color }: Props) {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [ref.current]);
+  }, []);
 
   let caseBackgroundColor = "bg-zinc-950";
   if (color === "blue") caseBackgroundColor = "bg-blue-950";
@@ -45,20 +46,24 @@ export default function PhonePreview({ croppedImageUrl, color }: Props) {
           top: imageSize.height / 6.22,
         }}
       >
-        <img
+        <Image
           width={imageSize.width / (3000 / 637)}
+          height={imageSize.height / (2001 / 1216)} // Temporary fix for the image not showing up
           className={cn(
             "phone-skew relative z-20 rounded-b-[10px] rounded-t-[15px] md:rounded-b-[20px] md:rounded-t-[30px]",
             caseBackgroundColor,
           )}
           src={croppedImageUrl}
+          alt="cropped image"
         />
       </div>
 
       <div className="relative z-40 h-full w-full">
-        <img
-          alt="phone"
+        <Image
+          alt="phone background"
           src="/clearphone.png"
+          width={3000}
+          height={2001} // Temporary fix for the image not showing up
           className="pointer-events-none h-full w-full rounded-md antialiased"
         />
       </div>

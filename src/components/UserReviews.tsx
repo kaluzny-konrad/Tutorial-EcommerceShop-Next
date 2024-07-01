@@ -1,6 +1,7 @@
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import H1Underlined from "./H1Underlined";
 import UserReview, { UserReviewProps } from "./UserReview";
+import Image from "next/image";
 
 const REVIEWS: UserReviewProps[] = [
   {
@@ -31,7 +32,15 @@ export default function UserReviews() {
   return (
     <MaxWidthWrapper className="flex flex-col items-center gap-16 pt-24 sm:gap-32">
       <div className="flex flex-col items-center gap-4 lg:flex-row-reverse lg:gap-6">
-        <img src="/snake-2.png" className="w-24" />
+        <Image
+          src="/snake-2.png"
+          width={96}
+          height={85}
+          className="w-24"
+          aria-hidden="true"
+          alt=""
+          role="presentation"
+        />
         <h2 className="def-header-2 text-center">
           What our <H1Underlined>customers</H1Underlined> say
         </h2>

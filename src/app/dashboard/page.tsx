@@ -21,8 +21,6 @@ import { formatPrice } from "@/lib/utils";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { notFound } from "next/navigation";
 
-export const ROUTE_DASHBOARD = "/dashboard";
-
 export default async function DashboardPage() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
@@ -145,7 +143,10 @@ export default async function DashboardPage() {
                     </div>
                   </TableCell>
                   <TableCell className="hidden sm:table-cell">
-                    <DashboardStatusDropdown id={order.id} orderStatus={order.OrderStatus} />
+                    <DashboardStatusDropdown
+                      id={order.id}
+                      orderStatus={order.OrderStatus}
+                    />
                   </TableCell>
                   <TableCell className="hidden md:table-cell">
                     {order.createdAt.toLocaleDateString()}

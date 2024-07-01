@@ -6,9 +6,7 @@ import { getUser } from "./actions";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { LS_CASE_CONFIGURATION_ID } from "@/config/localstorageNames";
-import { ROUTE_CONFIGURE_DESIGN } from "@/app/configure/design/page";
-
-export const ROUTE_AUTH_CALLBACK = "/auth-callback";
+import { ROUTE_CONFIGURE_DESIGN } from "@/config/routes";
 
 export default function AuthCallbackPage() {
   const [caseConfigurationId, setCaseConfigurationId] = useState<string | null>(

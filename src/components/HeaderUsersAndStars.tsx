@@ -1,4 +1,5 @@
 import { StarIcon } from "lucide-react";
+import Image from "next/image";
 
 export default function HeaderUsersAndStars() {
   const userImages = [
@@ -30,7 +31,9 @@ export default function HeaderUsersAndStars() {
 
 function UserImage(props: { src: string }) {
   return (
-    <img
+    <Image
+      width={40}
+      height={40}
       className="h-10 w-10 select-none rounded-full object-cover ring-2 ring-slate-100"
       src={props.src}
       alt="user image"

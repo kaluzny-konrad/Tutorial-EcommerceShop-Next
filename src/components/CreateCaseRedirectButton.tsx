@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { ROUTE_CONFIGURE_UPLOAD } from "@/app/configure/upload/page";
+import { ROUTE_CONFIGURE_UPLOAD } from "@/config/routes";
 
 export default function CreateCaseRedirectButton() {
   return (

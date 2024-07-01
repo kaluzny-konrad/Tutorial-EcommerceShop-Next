@@ -1,4 +1,5 @@
 import { CheckIcon, StarIcon } from "lucide-react";
+import Image from "next/image";
 
 export interface Content {
   LeftSideContent: string;
@@ -33,10 +34,12 @@ export default function UserReview(review: UserReviewProps) {
         </p>
       </div>
       <div className="mt-2 flex gap-4">
-        <img
+        <Image
+          width={48}
+          height={48}
           className="h-12 w-12 rounded-full object-cover"
           src={review.UserImage}
-          alt="user"
+          alt="user image"
         />
         <div className="flex flex-col">
           <p className="font-semibold">{review.UserName}</p>

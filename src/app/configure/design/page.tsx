@@ -2,10 +2,6 @@ import DesignConfigurator from "@/components/DesignConfigurator";
 import { db } from "@/db";
 import { notFound } from "next/navigation";
 
-export function ROUTE_CONFIGURE_DESIGN(caseConfigurationId: string) {
-  return `/configure/design?id=${caseConfigurationId}`;
-}
-
 interface PageProps {
   searchParams: {
     [key: string]: string | string[] | undefined;

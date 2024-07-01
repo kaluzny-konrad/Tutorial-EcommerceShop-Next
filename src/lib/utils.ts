@@ -33,7 +33,6 @@ export function canvasToFile(canvas: HTMLCanvasElement, fileName: string) {
   const base64 = canvas.toDataURL();
   const base64Data = base64.split(",")[1];
   const blob = base64ToBlob(base64Data, "image/png");
-  console.log(fileName);
   const file = new File([blob], `${fileName}.png`, { type: "image/png" });
   return file;
 }

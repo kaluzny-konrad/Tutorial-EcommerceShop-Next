@@ -29,7 +29,7 @@ export default function DesignPreview({
   const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
 
-  useEffect(() => setShowConfetti(true));
+  useEffect(() => setShowConfetti(true), []);
 
   const caseColorClassName = COLORS.find(
     (supportedColor) => supportedColor.value === caseConfiguration.CaseColor,

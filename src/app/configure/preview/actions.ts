@@ -11,8 +11,7 @@ import { getTotalPrice } from "@/lib/price";
 import { stripe } from "@/lib/stripe";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Order } from "@prisma/client";
-import { ROUTE_CONFIGURE_PREVIEW } from "./page";
-import { ROUTE_THANKYOU } from "@/app/thank-you/page";
+import { ROUTE_CONFIGURE_PREVIEW, ROUTE_THANKYOU } from "@/config/routes";
 
 export const createCheckoutSession = async ({
   caseConfigurationId,

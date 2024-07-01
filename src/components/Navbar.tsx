@@ -4,7 +4,7 @@ import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { ROUTE_CONFIGURE_UPLOAD } from "@/app/configure/upload/page";
+import { ROUTE_CONFIGURE_UPLOAD } from "@/config/routes";
 
 export default async function Navbar() {
   const { getUser } = getKindeServerSession();

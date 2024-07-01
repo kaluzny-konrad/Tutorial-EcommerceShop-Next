@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 interface Step {
@@ -99,7 +100,15 @@ function StepBody(props: ConfigureStepProps) {
         "flex items-center px-6 py-4 text-sm font-medium",
       )}
     >
-      <img src={props.imgPath} className="flex h-20 w-20 object-contain" />
+      <Image
+        src={props.imgPath}
+        width={80}
+        height={80}
+        className="flex h-20 w-20 object-contain"
+        aria-hidden="true"
+        alt=""
+        role="presentation"
+      />
 
       <span className="ml-4 flex flex-col text-sm">
         <span

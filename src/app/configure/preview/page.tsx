@@ -2,10 +2,6 @@ import DesignPreview from "@/components/DesignPreview";
 import { db } from "@/db";
 import { notFound } from "next/navigation";
 
-export function ROUTE_CONFIGURE_PREVIEW(caseConfigurationId: string) {
-  return `/configure/preview?id=${caseConfigurationId}`;
-}
-
 interface PageProps {
   searchParams: {
     [key: string]: string | string[] | undefined;
