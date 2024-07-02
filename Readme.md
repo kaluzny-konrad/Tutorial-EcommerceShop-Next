@@ -1,6 +1,6 @@
 
 # General
- https://www.youtube.com/watch?v=SG82Aqcaaa0
+Code written by tutorial: https://www.youtube.com/watch?v=SG82Aqcaaa0
 
 ## Examples
 
