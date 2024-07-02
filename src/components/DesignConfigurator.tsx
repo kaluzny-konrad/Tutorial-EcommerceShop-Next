@@ -155,6 +155,7 @@ export default function DesignConfigurator({
               alt="phone image"
               src="/phone-template.png"
               className="pointer-events-none z-50 select-none"
+              sizes="(max-width: 640px) 100vw, 640px"
             />
           </AspectRatio>
           <div className="absolute inset-0 bottom-px left-[3px] right-[3px] top-px z-40 rounded-[32px] shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]" />
@@ -200,6 +201,7 @@ export default function DesignConfigurator({
               fill
               alt="your image"
               className="pointer-events-none"
+              sizes="(max-width: 1280px) 100vw, 1280px"
             />
           </div>
         </Rnd>

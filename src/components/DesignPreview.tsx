@@ -90,6 +90,7 @@ export default function DesignPreview({
               "max-w-[150px] md:max-w-full",
             )}
             imgSrc={caseConfiguration.croppedImageUrl!}
+            priority={true}
           />
         </div>
 

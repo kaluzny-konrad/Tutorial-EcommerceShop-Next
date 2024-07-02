@@ -30,9 +30,9 @@ export default function AuthCallbackPage() {
   if (user?.user) {
     if (caseConfigurationId) {
       localStorage.removeItem(LS_CASE_CONFIGURATION_ID);
-      router.push(ROUTE_CONFIGURE_PREVIEW(caseConfigurationId));
+      setTimeout(() => router.push(ROUTE_CONFIGURE_PREVIEW(caseConfigurationId)), 0);
     } else {
-      router.push("/");
+      setTimeout(() => router.push("/"), 0);
     }
   }
 

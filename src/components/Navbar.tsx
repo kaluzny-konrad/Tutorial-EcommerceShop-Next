@@ -61,7 +61,7 @@ export default async function Navbar() {
               </>
             ) : (
               <>
-                {/* <Link
+                <Link
                   href="/api/auth/register"
                   className={buttonVariants({
                     size: "sm",
@@ -79,7 +79,7 @@ export default async function Navbar() {
                   })}
                 >
                   Login
-                </Link> */}
+                </Link>
 
                 <div className="hidden h-8 w-px bg-zinc-200 sm:block" />
 
