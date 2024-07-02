@@ -34,7 +34,7 @@ function UserImage(props: { src: string }) {
     <Image
       width={40}
       height={40}
-      className="h-10 w-10 select-none rounded-full object-cover ring-2 ring-slate-100"
+      className="h-10 w-10 select-none rounded-full object-cover ring-2 ring-slate-100 aspect-square"
       src={props.src}
       alt="user image"
     />

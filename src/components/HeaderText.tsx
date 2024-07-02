@@ -9,6 +9,7 @@ export default function HeaderText() {
         aria-hidden="true"
         alt=""
         role="presentation"
+        priority
         width={112}
         height={146}
         className="w-28 lg:w-24 h-auto lg:self-start"

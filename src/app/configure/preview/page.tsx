@@ -1,5 +1,6 @@
 import DesignPreview from "@/components/DesignPreview";
 import { db } from "@/db";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { notFound } from "next/navigation";
 
 interface PageProps {
@@ -25,5 +26,8 @@ export default async function ConfigurePreviewPage({
     return notFound();
   }
 
-  return <DesignPreview caseConfiguration={caseConfiguration} />;
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+
+  return <DesignPreview caseConfiguration={caseConfiguration} user={user} />;
 }

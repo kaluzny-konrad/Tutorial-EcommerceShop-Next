@@ -104,7 +104,8 @@ function StepBody(props: ConfigureStepProps) {
         src={props.imgPath}
         width={80}
         height={80}
-        className="flex h-20 w-20 object-contain"
+        priority
+        className="flex h-20 w-20 object-contain aspect-square"
         aria-hidden="true"
         alt=""
         role="presentation"

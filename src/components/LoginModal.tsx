@@ -26,8 +26,9 @@ const LoginModal = ({
             <Image
               src="/snake-1.png"
               alt="snake image"
-              className="object-contain"
-              fill
+              className="object-contain aspect-square"
+              width={96}
+              height={96}
             />
           </div>
           <DialogTitle className="text-center text-3xl font-bold tracking-tight text-gray-900">

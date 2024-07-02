@@ -12,20 +12,21 @@ import { useEffect, useState } from "react";
 import Confetti from "react-dom-confetti";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
-import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import LoginModal from "@/components/LoginModal";
 import { getTotalPrice } from "@/lib/price";
 import { createCheckoutSession } from "@/app/configure/preview/actions";
 import { LS_CASE_CONFIGURATION_ID } from "@/config/localstorageNames";
+import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
 
 export default function DesignPreview({
   caseConfiguration,
+  user,
 }: {
   caseConfiguration: CaseConfiguration;
+  user: KindeUser | null;
 }) {
   const router = useRouter();
   const { toast } = useToast();
-  const { user } = useKindeBrowserClient();
 
   const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
   const [showConfetti, setShowConfetti] = useState<boolean>(false);

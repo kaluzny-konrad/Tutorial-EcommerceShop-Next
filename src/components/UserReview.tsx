@@ -37,7 +37,7 @@ export default function UserReview(review: UserReviewProps) {
         <Image
           width={48}
           height={48}
-          className="h-12 w-12 rounded-full object-cover"
+          className="h-12 w-12 rounded-full object-cover aspect-square"
           src={review.UserImage}
           alt="user image"
         />
