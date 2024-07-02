@@ -55,6 +55,7 @@ export default function PhonePreview({ croppedImageUrl, color }: Props) {
           )}
           src={croppedImageUrl}
           alt="cropped image"
+          priority
         />
       </div>
 
@@ -65,6 +66,7 @@ export default function PhonePreview({ croppedImageUrl, color }: Props) {
           width={3000}
           height={2001} // Temporary fix for the image not showing up
           className="pointer-events-none h-full w-full rounded-md antialiased"
+          priority
         />
       </div>
     </AspectRatio>
