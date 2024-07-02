@@ -67,7 +67,6 @@ export default async function Navbar() {
                     size: "sm",
                     variant: "ghost",
                   })}
-                  prefetch={false}
                 >
                   Sign up
                 </Link>
@@ -78,7 +77,6 @@ export default async function Navbar() {
                     size: "sm",
                     variant: "ghost",
                   })}
-                  prefetch={false}
                 >
                   Login
                 </Link>
