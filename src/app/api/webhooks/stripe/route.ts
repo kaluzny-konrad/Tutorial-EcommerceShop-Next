@@ -40,6 +40,8 @@ export async function POST(req: Request) {
       const shippingAddress = session.shipping_details!
         .address as Stripe.Address;
 
+      console.log("session", session);
+
       if (!orderId) {
         throw new Error("Missing order id");
       }
