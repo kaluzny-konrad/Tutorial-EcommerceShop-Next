@@ -16,6 +16,7 @@ import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import LoginModal from "@/components/LoginModal";
 import { getTotalPrice } from "@/lib/price";
 import { createCheckoutSession } from "@/app/configure/preview/actions";
+import { LS_CASE_CONFIGURATION_ID } from "@/config/localstorageNames";
 
 export default function DesignPreview({
   caseConfiguration,
@@ -45,7 +46,7 @@ export default function DesignPreview({
     if (user) {
       createPaymentSession({ caseConfigurationId: caseConfiguration.id });
     } else {
-      localStorage.setItem("configurationId", caseConfiguration.id);
+      localStorage.setItem(LS_CASE_CONFIGURATION_ID, caseConfiguration.id);
       setIsLoginModalOpen(true);
     }
   };

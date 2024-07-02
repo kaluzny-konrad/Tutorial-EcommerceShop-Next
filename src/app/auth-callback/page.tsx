@@ -6,7 +6,7 @@ import { getUser } from "./actions";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { LS_CASE_CONFIGURATION_ID } from "@/config/localstorageNames";
-import { ROUTE_CONFIGURE_DESIGN } from "@/config/routes";
+import { ROUTE_CONFIGURE_PREVIEW } from "@/config/routes";
 
 export default function AuthCallbackPage() {
   const [caseConfigurationId, setCaseConfigurationId] = useState<string | null>(
@@ -30,7 +30,7 @@ export default function AuthCallbackPage() {
   if (user?.user) {
     if (caseConfigurationId) {
       localStorage.removeItem(LS_CASE_CONFIGURATION_ID);
-      router.push(ROUTE_CONFIGURE_DESIGN(caseConfigurationId));
+      router.push(ROUTE_CONFIGURE_PREVIEW(caseConfigurationId));
     } else {
       router.push("/");
     }
