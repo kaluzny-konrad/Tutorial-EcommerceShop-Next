@@ -37,10 +37,11 @@ export async function POST(req: Request) {
 
       const billingAddress = session.customer_details!
         .address as Stripe.Address;
-      const shippingAddress = session.shipping_details!
-        .address as Stripe.Address;
+      let shippingAddress = billingAddress;
 
-      console.log("session", session);
+      if (session.shipping_details?.address) {
+        shippingAddress = session.shipping_details!.address;
+      }
 
       if (!orderId) {
         throw new Error("Missing order id");
